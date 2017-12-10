@@ -155,10 +155,9 @@ public class GameThread extends JPanel implements Runnable {
 
 	}
 
-	// KeyListener
+	// KeyListener ±¸Çö
 	private class InputedKeyListener implements KeyListener {
 
-		// key event handling
 		public void keyTyped(KeyEvent key) {
 		}
 

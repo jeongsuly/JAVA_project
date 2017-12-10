@@ -27,7 +27,11 @@ public class Book extends GameObject {
 	}
 
 	public ArrayList<int[]> getChanges() {
-		return tileChanges; //tileChages의 Get메소드
+		return tileChanges; //tileChanges의 Get메소드
+	}
+
+	public void addChange(int[] i) {
+		tileChanges.add(i); //Pencil을 들고 있을때 Space키를 사용하여 Book을 획득하는 구현
 	}
 
 	public void update() {

@@ -1,4 +1,3 @@
-
 package GameObject;
 
 import java.awt.Graphics2D;

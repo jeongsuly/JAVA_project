@@ -2,7 +2,9 @@
 package Manager;
 
 import java.awt.event.KeyEvent;
-
+/*
+ * 키보드의 특정 키를 정수값으로 정의 하는 가상 키코드(VK) 사용
+ */
 public class Keys {
 
 	public static final int NUM_KEYS = 6;
@@ -17,6 +19,7 @@ public class Keys {
 	public static int SPACE = 4;
 	public static int ESCAPE = 5;
 
+	
 	public static void keySet(int i, boolean b) {
 		if (i == KeyEvent.VK_UP) {
 			keyState[UP] = b;
@@ -33,6 +36,7 @@ public class Keys {
 		}
 	}
 
+
 	// 게임을 재시작할때 이전에 남아있던 모든 키 입력값을 false로 바꿈
 	public static void init() {
 		for (int i = 0; i < NUM_KEYS; i++) {
@@ -47,7 +51,9 @@ public class Keys {
 		}
 	}
 
+	//키가 눌러졌을 때 발생
 	public static boolean isPressed(int i) {
+		
 		return keyState[i] && !prevKeyState[i];
 	}
 

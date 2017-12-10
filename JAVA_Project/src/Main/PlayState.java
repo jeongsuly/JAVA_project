@@ -17,26 +17,19 @@ public class PlayState {
 
 	private boolean paused = false;// 일지 정지를 위한 boolean 데이터
 
-	// player
 	private Player player;
 
-	// friend
 	private ArrayList<Friends> friends;
 	private int range; // 플레이어 탐지 범위
 
-	// tilemap
 	private TileMap tileMap;
 
-	// books
 	private ArrayList<Book> books;
 
-	// items
 	private ArrayList<Pencil> pencils;
 
-	// sparkles
 	private ArrayList<Sparkle> sparkles;
 
-	// Game Over Check;
 	private boolean isGameOver;
 	private boolean isGameClear;
 
@@ -144,7 +137,7 @@ public class PlayState {
 		if (tileMap.isMoving())
 			return;
 
-		// update player
+
 		player.update();
 
 		// friends 추가
@@ -180,7 +173,6 @@ public class PlayState {
 			}
 		}
 
-		// update sparkles
 		for (int i = 0; i < sparkles.size(); i++) {
 			Sparkle s = sparkles.get(i);
 			s.update();
@@ -208,27 +200,22 @@ public class PlayState {
 	// 생성된 오브젝트들을 맵에 그려주는 메소드
 	public void draw(Graphics2D g) {
 
-		// draw tileMap
 		tileMap.draw(g);
 
-		// draw player
 		player.draw(g);
 
-		// draw Friends
 		for (Friends f : friends) {
 			f.draw(g);
 		}
-		// draw books
+	
 		for (Book d : books) {
 			d.draw(g);
 		}
 
-		// draw sparkles
 		for (Sparkle s : sparkles) {
 			s.draw(g);
 		}
 
-		// draw pencils
 		for (Pencil i : pencils) {
 			i.draw(g);
 		}

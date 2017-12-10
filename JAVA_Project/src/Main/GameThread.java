@@ -19,16 +19,14 @@ import Panel.MenuPanel;
 
 public class GameThread extends JPanel implements Runnable {
 
-	// public PlayState play;
+	
 	public MenuPanel menu;
 	public PlayState play;
 	private PanelController pControll;
 
-	// game loop thread
 	private Thread thread;
 	private boolean isRunning;
 
-	// drawing
 	private BufferedImage image;
 	private Graphics2D g;
 	private Graphics g2;

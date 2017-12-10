@@ -1,7 +1,3 @@
-// The tile map class contains a loaded tile set
-// and a 2d array of the map.
-// Each index in the map corresponds to a specific tile.
-
 package TileMap;
 
 import java.awt.Graphics2D;
@@ -21,14 +17,12 @@ public class TileMap {
 	private int speed;
 	private boolean isMoving;
 
-	// map
 	private int[][] map;
 	private int tileSize;
 	private int numRows;
 	private int numCols;
 	private int[][] stageMap;// Tile type을 2차원 배열로 만들어 loadMap method에서 쉽게 맵 수정 가능하게 하기 위해
 
-	// tileset
 	private BufferedImage tileset;
 	private int numTilesAcross;
 	private Tile[][] tiles;
@@ -64,12 +58,10 @@ public class TileMap {
 
 	}
 
-	// Create Map
 	public void loadMap() {
 
 		map = new int[numRows][numCols];
 
-		// TileMap Index
 		stageMap = new int[numRows][numCols];
 		//0~19 이동가능 20~39 이동불가 21은 Pencil을 들고있을때 1로 변환가능
 		int[][] stageMap = { 
@@ -93,7 +85,7 @@ public class TileMap {
 
 		};
 
-		// map <-> tile Index
+
 		for (int row = 0; row < numRows; row++) {
 
 			for (int col = 0; col < numCols; col++) {
@@ -103,7 +95,7 @@ public class TileMap {
 
 	}
 
-	// get,set Method
+
 	public int getTileSize() {
 		return tileSize;
 	}
@@ -124,7 +116,7 @@ public class TileMap {
 		return numCols;
 	}
 
-	// get type Normal or Block
+
 	public int getType(int row, int col) {
 		int rc = map[row][col];
 		int r = rc / numTilesAcross;
@@ -186,7 +178,7 @@ public class TileMap {
 			isMoving = false;
 
 	}
-	//Draw
+
 	public void draw(Graphics2D g) {
 
 		for (int row = 0; row < numRows; row++) {

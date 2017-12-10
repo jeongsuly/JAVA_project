@@ -1,8 +1,3 @@
-// Diamond class.
-// May contain a list of tileChanges.
-// These tileChanges are used to modify
-// the tile map upon collection.
-
 package GameObject;
 
 import java.awt.Graphics2D;
